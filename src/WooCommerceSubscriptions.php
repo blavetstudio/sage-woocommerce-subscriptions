@@ -56,15 +56,17 @@ class WooCommerceSubscriptions
             return $template;
         }
 
-        // Return filename for status screen
-        if (
-            is_admin() &&
-            !wp_doing_ajax() &&
-            get_current_screen() &&
-            get_current_screen()->id === 'woocommerce_page_wc-status'
-        ) {
-            return $themeTemplate;
-        }
+        // TODO: Return filename for status screen.
+        // WooCommerce Subscriptions doesn't filter the template files locations as WooCommerce does, so this code is not used
+        // woocommerce-subscriptions/includes/admin/class-wcs-admin-system-status.php:163
+        // if (
+        //     is_admin() &&
+        //     !wp_doing_ajax() &&
+        //     get_current_screen() &&
+        //     get_current_screen()->id === 'woocommerce_page_wc-status'
+        // ) {
+        //     return $themeTemplate;
+        // }
 
         // Include directly unless it's a blade file.
         if (!Str::endsWith($themeTemplate, '.blade.php')) {
