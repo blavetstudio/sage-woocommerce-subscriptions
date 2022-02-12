@@ -1,4 +1,4 @@
-# Sage WooCommerce
+# Sage WooCommerce Subscriptions
 
 Add WooCommerce Subscriptions support to Sage 10.
 
