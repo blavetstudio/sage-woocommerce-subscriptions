@@ -1,0 +1,43 @@
+{
+  "name": "blavetstudio/sage-woocommerce-subscriptions",
+  "type": "library",
+  "license": "MIT",
+  "description": "",
+  "homepage": "https://github.com/blavetstudio/sage-woocommerce-subscriptions",
+  "authors": [
+    {
+      "name": "Carlos Faria",
+      "email": "carlos@blavetstudio.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Blavetstudio\\Sage\\WooCommerceSubscriptions\\": "src/"
+    }
+  },
+  "require": {
+    "roots/acorn": "*"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "~3.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": [
+      "phpcs --ignore=vendor --extensions=php --standard=PSR2 ."
+    ]
+  },
+  "archive" : {
+    "exclude": [
+      ".gitignore"
+    ]
+  },
+  "extra": {
+    "acorn": {
+      "providers": [
+        "Blavetstudio\\Sage\\WooCommerceSubscriptions\\WooCommerceSubscriptionsServiceProvider"
+      ]
+    }
+  }
+}
